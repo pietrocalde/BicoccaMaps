@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="home"
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item android:title="edifici"
+        android:id="@+id/edifici"
+        android:icon="@drawable/ic_baseline_holiday_village_24"/>
+    <item android:title="preferiti"
+        android:id="@+id/prefiti"
+        android:icon="@drawable/ic_baseline_star_outline_24"/>
+    <item android:title="eventi"
+        android:id="@+id/eventi"
+        android:icon="@drawable/ic_baseline_no_drinks_24"/>
+</menu>

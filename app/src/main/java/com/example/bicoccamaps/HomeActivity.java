@@ -3,28 +3,73 @@ package com.example.bicoccamaps;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.bicoccamaps.databinding.ActivityHomeBinding;
 
+
+public class HomeActivity extends AppCompatActivity {
+     ActivityHomeBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-
-        //getSupportActionBar().hide();
-        // Initialize fragment
+       setContentView(R.layout.activity_home);
+        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+        //setContentView(binding.getRoot());
         Fragment fragment = new MapFragment();
-        // Open fragment
         getSupportFragmentManager()
                 .beginTransaction().replace(R.id.frame_layout,fragment)
                 .commit();
+            replaceFragment(new PreferitiFragment());
 
+        /* *****************************************************************/
+        binding.bottomNavigationView.setOnItemSelectedListener(item -> {
+
+                    if (item.getItemId()==R.id.home) {
+                        /* ***********/
+                    }else if (item.getItemId()==R.id.edifici){
+                        replaceFragment(new EdificiFragment());
+                    }else if (item.getItemId()==R.id.eventi) {
+                        replaceFragment(new Eventi());
+                    }else if (item.getItemId()== R.id.prefiti) {
+                        replaceFragment(new PreferitiFragment());
+                    }
+
+            return true;
+
+        });
     }
+
+    private void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager= getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout,fragment);
+        fragmentTransaction.commit();
+    }
+
+/* NASCONDERE NAVBAR
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus && Build.VERSION.SDK_INT >= 19) {
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        }
+    }
+    /*/
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater=getMenuInflater();
