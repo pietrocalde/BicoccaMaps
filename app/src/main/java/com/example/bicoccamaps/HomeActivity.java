@@ -21,26 +21,26 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_home);
+       //setContentView(R.layout.activity_home);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
-        //setContentView(binding.getRoot());
+        setContentView(binding.getRoot());
         Fragment fragment = new MapFragment();
         getSupportFragmentManager()
                 .beginTransaction().replace(R.id.frame_layout,fragment)
                 .commit();
-            replaceFragment(new PreferitiFragment());
+            //replaceFragment(new PreferitFragment());
 
         /* *****************************************************************/
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
                     if (item.getItemId()==R.id.home) {
                         /* ***********/
-                    }else if (item.getItemId()==R.id.edifici){
-                        replaceFragment(new EdificiFragment());
-                    }else if (item.getItemId()==R.id.eventi) {
-                        replaceFragment(new Eventi());
-                    }else if (item.getItemId()== R.id.prefiti) {
-                        replaceFragment(new PreferitiFragment());
+                    }else if (item.getItemId()==R.id.edifice){
+                        replaceFragment(new EdificeFragment());
+                    }else if (item.getItemId()==R.id.event) {
+                        replaceFragment(new EventFragment());
+                    }else if (item.getItemId()== R.id.preterit) {
+                        replaceFragment(new PreferitFragment());
                     }
 
             return true;
