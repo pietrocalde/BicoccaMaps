@@ -21,26 +21,25 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       //setContentView(R.layout.activity_home);
+        //setContentView(R.layout.activity_home);
         binding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         Fragment fragment = new MapFragment();
         getSupportFragmentManager()
                 .beginTransaction().replace(R.id.frame_layout,fragment)
                 .commit();
-            //replaceFragment(new PreferitFragment());
 
         /* *****************************************************************/
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
                     if (item.getItemId()==R.id.home) {
-                        /* ***********/
+                        replaceFragment(new MapFragment());
                     }else if (item.getItemId()==R.id.edifice){
                         replaceFragment(new EdificeFragment());
                     }else if (item.getItemId()==R.id.event) {
                         replaceFragment(new EventFragment());
-                    }else if (item.getItemId()== R.id.preterit) {
-                        replaceFragment(new PreferitFragment());
+                    }else if (item.getItemId()== R.id.favourite) {
+                        replaceFragment(new FavouriteFragment());
                     }
 
             return true;
@@ -54,20 +53,6 @@ public class HomeActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout,fragment);
         fragmentTransaction.commit();
     }
-
-/* NASCONDERE NAVBAR
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-        super.onWindowFocusChanged(hasFocus);
-        if (hasFocus && Build.VERSION.SDK_INT >= 19) {
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
-        }
-    }
-    /*/
 
 
     @Override

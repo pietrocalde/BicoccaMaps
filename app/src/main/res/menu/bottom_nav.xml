@@ -7,8 +7,8 @@
     <item android:title="edifice"
         android:id="@+id/edifice"
         android:icon="@drawable/ic_baseline_holiday_village_24"/>
-    <item android:title="preterit"
-        android:id="@+id/preterit"
+    <item android:title="favourite"
+        android:id="@+id/favourite"
         android:icon="@drawable/ic_baseline_star_outline_24"/>
     <item android:title="event"
         android:id="@+id/event"
