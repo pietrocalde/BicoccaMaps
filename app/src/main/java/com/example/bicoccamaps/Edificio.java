@@ -5,6 +5,7 @@ public class Edificio {
     private String nome;
     private String indirizzo;
 
+    //costruttore vuoto
     public Edificio(){
     }
 
