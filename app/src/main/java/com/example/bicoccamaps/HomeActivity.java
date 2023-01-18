@@ -35,7 +35,7 @@ public class HomeActivity extends AppCompatActivity {
                     if (item.getItemId()==R.id.home) {
                         replaceFragment(new MapFragment());
                     }else if (item.getItemId()==R.id.edifice){
-                        replaceFragment(new EdificeFragment());
+                        replaceFragment(new EdificioFragment());
                     }else if (item.getItemId()==R.id.event) {
                         replaceFragment(new EventFragment());
                     }else if (item.getItemId()== R.id.favourite) {
