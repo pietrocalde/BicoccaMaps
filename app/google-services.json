@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563329073376",
+    "project_id": "bicoccamaps",
+    "storage_bucket": "bicoccamaps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563329073376:android:8a71b7d4fe731f4a001085",
+        "android_client_info": {
+          "package_name": "com.example.bicoccamaps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563329073376-j194fpoj3e28uuvttgiain09lr8sa90o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP3YT1JUB786cFJCkcClKDmGZIVdKiZBs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563329073376-j194fpoj3e28uuvttgiain09lr8sa90o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
