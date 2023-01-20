@@ -18,7 +18,7 @@
         android:theme="@style/Theme.BicoccaMaps"
         tools:targetApi="31">
         <activity
-            android:name=".EdificioActivity"
+            android:name=".ui.main.BuildingsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -30,7 +30,7 @@
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".ui.main.HomeActivity"
             android:exported="false"
             android:label="Home">
             <meta-data
@@ -38,7 +38,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,13 +4,13 @@
     <item android:title="home"
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_home_24"/>
-    <item android:title="edifice"
-        android:id="@+id/edifice"
+    <item android:title="edifici"
+        android:id="@+id/buildings"
         android:icon="@drawable/ic_baseline_holiday_village_24"/>
-    <item android:title="favourite"
+    <item android:title="favoriti"
         android:id="@+id/favourite"
         android:icon="@drawable/ic_baseline_star_outline_24"/>
-    <item android:title="event"
-        android:id="@+id/event"
+    <item android:title="eventi"
+        android:id="@+id/events"
         android:icon="@drawable/ic_baseline_no_drinks_24"/>
 </menu>
