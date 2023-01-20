@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.bicoccamaps.R;
+import com.example.bicoccamaps.databinding.ActivityHomeBinding;
 
 
 public class HomeActivity extends AppCompatActivity {

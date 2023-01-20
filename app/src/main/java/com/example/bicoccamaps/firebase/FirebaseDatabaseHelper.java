@@ -19,49 +19,42 @@ import java.util.List;
 public class FirebaseDatabaseHelper {
 
     private FirebaseDatabase mDatabase;
-    private DatabaseReference mReferenceEdifici;
-    private List<Building> edifici = new ArrayList<>();
+    private DatabaseReference mReferenceBuildings;
+    private List<Building> buildings = new ArrayList<>();
 
     public interface DataStatus{
-        void DataIsLoaded(List<Building> books, List<String> keys);
+        void DataIsLoaded(List<Building> buildings, List<String> keys);
         void DataIsInserted();
         void DataIsUpdated();
         void DataIsDeleted();
     }
 
     public FirebaseDatabaseHelper() {
-        mDatabase = FirebaseDatabase.getInstance("https://bicoccamaps-default-rtdb.europe-west1.firebasedatabase.app/"
-        );
-        mReferenceEdifici = mDatabase.getReference("Edifici");
+        mDatabase = FirebaseDatabase.getInstance("https://bicoccamaps-default-rtdb.europe-west1.firebasedatabase.app/");
+        mReferenceBuildings = mDatabase.getReference("Buildings");
     }
 
     public void readEdifici(final DataStatus dataStatus){
-        mReferenceEdifici.addValueEventListener(new ValueEventListener() {
+        mReferenceBuildings.addValueEventListener(new ValueEventListener() {
             @Override
-            /*
+
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                edifici.clear();
+                buildings.clear();
                 List<String> keys = new ArrayList<>();
 
                 for(DataSnapshot keyNode : dataSnapshot.getChildren()){
                     keys.add(keyNode.getKey());
-                    Building edificio = keyNode.getValue(Building.class);
-                    edifici.add(edificio);
+                    Building building = keyNode.getValue(Building.class);
+                    buildings.add(building);
                 }
-                dataStatus.DataIsLoaded(edifici, keys);
+                dataStatus.DataIsLoaded(buildings, keys);
             }
-*/
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                Building value = dataSnapshot.getValue(Building.class);
-                Log.d("VALORE", "Value is: " + value.getName());
-            }
+
             //***************************************************************
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 DatabaseError databaseError = null;
-                Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
+                Log.w("ErroreDATABASE", "loadPost:onCancelled", databaseError.toException());
             }
         });
     }

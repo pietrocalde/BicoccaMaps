@@ -22,8 +22,8 @@ public class BuildingsActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview_buildings);
         new FirebaseDatabaseHelper().readEdifici(new FirebaseDatabaseHelper.DataStatus() {
             @Override
-            public void DataIsLoaded(List<Building> edifici, List<String> keys) {
-                new RecyclerView_Config().setConfig(mRecyclerView, BuildingsActivity.this, edifici, keys);
+            public void DataIsLoaded(List<Building> buildings, List<String> keys) {
+                new RecyclerView_Config().setConfig(mRecyclerView, BuildingsActivity.this, buildings, keys);
             }
 
             @Override
