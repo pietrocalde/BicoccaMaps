@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/mapFragment"
         android:name="com.example.bicoccamaps.ui.main.MapFragment"
-        android:label="fragment_map"
+
         tools:layout="@layout/fragment_map" />
     <fragment
         android:id="@+id/buildingsFragment"
         android:name="com.example.bicoccamaps.ui.main.BuildingsFragment"
-        android:label="fragment_buildings"
+
         tools:layout="@layout/fragment_buildings" />
     <fragment
         android:id="@+id/eventsFragment"
         android:name="com.example.bicoccamaps.ui.main.EventsFragment"
-        android:label="fragment_events"
+
         tools:layout="@layout/fragment_events" />
     <fragment
         android:id="@+id/favouriteFragment"
         android:name="com.example.bicoccamaps.ui.main.FavouriteFragment"
-        android:label="fragment_favourite"
+
         tools:layout="@layout/fragment_favourite" />
 </navigation>

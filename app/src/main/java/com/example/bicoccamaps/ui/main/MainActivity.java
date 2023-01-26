@@ -12,6 +12,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.os.Bundle;
+
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 
 import com.example.bicoccamaps.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -37,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.eventsFragment, R.id.favouriteFragment).build();
 
         // For the Toolbar
-        NavigationUI.setupActionBarWithNavController(this, navController,
-                appBarConfiguration);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
         // For the awNavigationView (NavigationDrer)
         NavigationUI.setupWithNavController(bottomNav, navController);
