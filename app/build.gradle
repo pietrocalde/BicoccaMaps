@@ -14,7 +14,6 @@ android {
         targetSdk 32
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -35,6 +34,9 @@ android {
 }
 
 dependencies {
+    def room_version = "2.4.3"
+    //def lifecycle_version = "2.5.1"
+    def nav_version = "2.5.3"
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
@@ -47,4 +49,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation platform('com.google.firebase:firebase-bom:31.1.1')
     implementation 'com.google.firebase:firebase-database'
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    //implementation "androidx.arch:lyfecycle-runtime:$lifecycle_version"
+    //annotationProcessor "androidx.arch:lyfecycle-compiler:$lifecycle_version"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
 }

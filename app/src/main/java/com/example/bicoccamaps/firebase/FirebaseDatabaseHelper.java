@@ -1,12 +1,11 @@
 package com.example.bicoccamaps.firebase;
 
-import static android.content.ContentValues.TAG;
-
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import com.example.bicoccamaps.model.Building;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -31,23 +30,35 @@ public class FirebaseDatabaseHelper {
 
     public FirebaseDatabaseHelper() {
         mDatabase = FirebaseDatabase.getInstance("https://bicoccamaps-default-rtdb.europe-west1.firebasedatabase.app/");
-        mReferenceBuildings = mDatabase.getReference("Buildings");
+        mReferenceBuildings = mDatabase.getReference().getRef();
     }
 
-    public void readEdifici(final DataStatus dataStatus){
+    public void readBuildings(final DataStatus dataStatus){
         mReferenceBuildings.addValueEventListener(new ValueEventListener() {
-            @Override
 
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull Task <DataSnapshot> task) {
                 buildings.clear();
                 List<String> keys = new ArrayList<>();
 
-                for(DataSnapshot keyNode : dataSnapshot.getChildren()){
-                    keys.add(keyNode.getKey());
-                    Building building = keyNode.getValue(Building.class);
-                    buildings.add(building);
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
                 }
-                dataStatus.DataIsLoaded(buildings, keys);
+                else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    for(DataSnapshot keyNode : task.getResult().getChildren()){
+                        keys.add(keyNode.getKey());
+                        Building building = keyNode.getValue(Building.class);
+                        buildings.add(building);
+                    }
+                    dataStatus.DataIsLoaded(buildings, keys);
+                }
+
+            }
+
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
             }
 
             //***************************************************************

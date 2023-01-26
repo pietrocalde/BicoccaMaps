@@ -56,8 +56,8 @@ public class BuildingsFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        Intent i = new Intent(getActivity(), BuildingsActivity.class);
-        startActivity(i);
+        //Intent i = new Intent(getActivity(), BuildingsActivity.class);
+        //startActivity(i);
     }
 
     @Override

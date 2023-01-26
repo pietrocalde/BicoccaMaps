@@ -2,15 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="home"
-        android:id="@+id/home"
+        android:id="@+id/mapFragment"
+        android:enabled="true"
         android:icon="@drawable/ic_baseline_home_24"/>
+
     <item android:title="edifici"
-        android:id="@+id/buildings"
+        android:id="@+id/buildingsFragment"
+        android:enabled="true"
         android:icon="@drawable/ic_baseline_holiday_village_24"/>
-    <item android:title="favoriti"
-        android:id="@+id/favourite"
-        android:icon="@drawable/ic_baseline_star_outline_24"/>
+
     <item android:title="eventi"
-        android:id="@+id/events"
+        android:id="@+id/eventsFragment"
+        android:enabled="true"
         android:icon="@drawable/ic_baseline_no_drinks_24"/>
+
+    <item android:title="favoriti"
+        android:id="@+id/favouriteFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_star_outline_24"/>
 </menu>
