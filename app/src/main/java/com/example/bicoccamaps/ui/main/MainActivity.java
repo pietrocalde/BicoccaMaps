@@ -1,27 +1,19 @@
 package com.example.bicoccamaps.ui.main;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.os.Bundle;
 
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import android.widget.Toast;
 
 
 import com.example.bicoccamaps.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.search.SearchBar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.top_appbar);
-        setSupportActionBar(toolbar);
+        Toolbar searchBar = findViewById(R.id.top_appbar);
+        setSupportActionBar(searchBar);
+
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().
                 findFragmentById(R.id.nav_host_fragment);
@@ -48,5 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         // For the awNavigationView (NavigationDrer)
         NavigationUI.setupWithNavController(bottomNav, navController);
+
+
     }
 }
