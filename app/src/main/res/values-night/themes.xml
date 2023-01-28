@@ -66,4 +66,5 @@
         <item name="android:background">@color/dark_grey</item>
         <item name="titleTextColor">@color/white</item>
     </style>
+
 </resources>

@@ -10,17 +10,9 @@
     tools:context=".ui.main.MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/top_appbar"
+        android:id="@+id/sui"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/ThemeOverlay.Material3.Light"
-        app:popupTheme="@style/ThemeOverlay.Material3.Dark"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        android:layout_height="match_parent">
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
