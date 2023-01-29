@@ -4,20 +4,20 @@
     <item android:title="home"
         android:id="@+id/mapFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:icon="@drawable/home_24"/>
 
-    <item android:title="edifici"
+    <item android:title="buildings"
         android:id="@+id/buildingFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_holiday_village_24"/>
+        android:icon="@drawable/building_24"/>
 
-    <item android:title="eventi"
+    <item android:title="events"
         android:id="@+id/eventsFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_no_drinks_24"/>
+        android:icon="@drawable/event_24"/>
 
-    <item android:title="favoriti"
+    <item android:title="favorites"
         android:id="@+id/favouriteFragment"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_star_outline_24"/>
+        android:icon="@drawable/favorite_24"/>
 </menu>
