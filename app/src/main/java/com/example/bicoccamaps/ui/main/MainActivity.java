@@ -37,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
         //getSupportActionBar().hide();
 
         //AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.bar_layout);
-        //SearchBar topbar = (SearchBar) findViewById(R.id.search_bar);
+        SearchBar topbar = (SearchBar) findViewById(R.id.search_bar);
 
         //topbar.setNavigationIcon(R.drawable.home_24);
         //topbar.setLogo(R.drawable.home_24);
         //topbar.setNavigationIcon(R.drawable.favorite_24);
         //topbar.setCollapseIcon(R.drawable.home_24);
         //topbar.setOverflowIcon(R.drawable.building_24);
+        //topbar.setOverflowIcon(R.drawable.home_24);
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().
                 findFragmentById(R.id.nav_host_fragment);

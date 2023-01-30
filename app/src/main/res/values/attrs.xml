@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="colorBicocca" format="color" />
+    <attr name="colorOnBicocca" format="color" />
+    <attr name="colorBicoccaContainer" format="color" />
+    <attr name="colorOnBicoccaContainer" format="color" />
+    <attr name="harmonizeBicocca" format="boolean" />
+</resources>

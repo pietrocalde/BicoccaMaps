@@ -1,0 +1,22 @@
+{
+  "status": "ok",
+  "totalResults": 4,
+  "buildings": [
+    {
+      "address": "Piazza della Scienza, 1, 20126 Milano MI",
+      "name": "Atlas"
+    },
+    {
+      "address": "Piazza della Scienza, 3, 20126 Milano MI",
+      "name": "Quantum"
+    },
+    {
+      "address": "Piazza della Scienza, 2, 20126 Milano MI",
+      "name": "Bios"
+    },
+    {
+      "address": "Piazza della Scienza, 4, 20126 Milano MI",
+      "name": "Tellus"
+    }
+  ]
+}

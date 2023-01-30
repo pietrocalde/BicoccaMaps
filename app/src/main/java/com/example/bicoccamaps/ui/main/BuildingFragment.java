@@ -25,8 +25,14 @@ import android.widget.ListView;
 import com.example.bicoccamaps.R;
 import com.example.bicoccamaps.model.Building;
 import com.example.bicoccamaps.adapter.BuildingsAdapter;
+import com.example.bicoccamaps.model.BuildingApiResponse;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.gson.Gson;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,7 +110,8 @@ public class BuildingFragment extends Fragment {
             buildingsArray.add(new Building("nome"+i, "indirizzo"+i));
         }
 
-        BuildingsAdapter adapter = new BuildingsAdapter(buildingsArray, new BuildingsAdapter.OnItemClickListener() {
+
+        BuildingsAdapter adapter = new BuildingsAdapter(parseJSON(), new BuildingsAdapter.OnItemClickListener() {
             @Override
             public void onBuildingClick(Building building) {
                 /* ID per creare pagine specifiche */
@@ -113,4 +120,28 @@ public class BuildingFragment extends Fragment {
         });
         recyclerViewBuildings.setAdapter(adapter);
     }
+
+    private List<Building> parseJSON() {
+        InputStream inputStream = null;
+        try {
+            inputStream = requireActivity().getAssets().open("buildings.json");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+        BuildingApiResponse buildingsApiResponse = new Gson().fromJson(bufferedReader, BuildingApiResponse.class);
+        return buildingsApiResponse.getBuildings();
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
