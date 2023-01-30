@@ -35,9 +35,11 @@ android {
 
 dependencies {
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
-    def room_version = "2.4.3"
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    def room_version = "2.5.0"
     def lifecycle_version = "2.5.1"
     def nav_version = "2.5.3"
+    def collection_version = "1.2.0"
 
     implementation 'androidx.appcompat:appcompat:1.6.0'
     implementation 'com.google.android.material:material:1.8.0'
@@ -56,4 +58,5 @@ dependencies {
     //annotationProcessor "androidx.arch:lyfecycle-compiler:$lifecycle_version"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
     implementation "androidx.navigation:navigation-ui:$nav_version"
+    implementation "androidx.collection:collection:$collection_version"
 }

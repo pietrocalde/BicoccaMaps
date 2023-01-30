@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.bicoccamaps.R;
 import com.example.bicoccamaps.model.Building;
 
+import java.util.Collection;
 import java.util.List;
 
 public class BuildingsAdapter extends RecyclerView.Adapter<BuildingsAdapter.BuildingViewHolder>{
@@ -49,11 +50,13 @@ public class BuildingsAdapter extends RecyclerView.Adapter<BuildingsAdapter.Buil
     public class BuildingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private final TextView textViewName;
         private final TextView textViewAddress;
+
         public BuildingViewHolder(@NonNull View itemView) {
             super(itemView);
-        textViewName = itemView.findViewById(R.id.textview_name);
-        textViewAddress = itemView.findViewById(R.id.textview_address);
+            textViewName = itemView.findViewById(R.id.textview_name);
+            textViewAddress = itemView.findViewById(R.id.textview_address);
         }
+
         public void bind(Building building){
             textViewName.setText(building.getName());
             textViewAddress.setText(building.getAddress());

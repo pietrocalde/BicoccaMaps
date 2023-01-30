@@ -13,4 +13,6 @@
     <color name="indigo_100">#e8eaf6</color>
     <color name="dark_grey">#212121</color>
     <color name="unimib_red">#FFA71E3B</color>
+    <color name="unimib_red_light">#AE485D</color>
+    <color name="unimib_red_dark">#81172D</color>
 </resources>

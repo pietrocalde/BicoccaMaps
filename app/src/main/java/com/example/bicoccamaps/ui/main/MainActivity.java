@@ -13,6 +13,8 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
+
 import com.example.bicoccamaps.R;
 import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -26,19 +28,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_fake);
-        setSupportActionBar(toolbar);
         getSupportActionBar().hide();
 
-        AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.bar_layout);
-        SearchBar topbar = (SearchBar) findViewById(R.id.search_bar);
+        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_fake);
+
+
+        //toolbar.setVisibility(View.GONE);
+        //getSupportActionBar().hide();
+
+        //AppBarLayout appBarLayout = (AppBarLayout) findViewById(R.id.bar_layout);
+        //SearchBar topbar = (SearchBar) findViewById(R.id.search_bar);
 
         //topbar.setNavigationIcon(R.drawable.home_24);
         //topbar.setLogo(R.drawable.home_24);
         //topbar.setNavigationIcon(R.drawable.favorite_24);
         //topbar.setCollapseIcon(R.drawable.home_24);
         //topbar.setOverflowIcon(R.drawable.building_24);
-
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().
                 findFragmentById(R.id.nav_host_fragment);
