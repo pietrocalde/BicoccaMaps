@@ -80,8 +80,7 @@ public class BuildingFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_building, container, false);
     }
@@ -101,13 +100,13 @@ public class BuildingFragment extends Fragment {
             }
         });
 
-        RecyclerView recyclerViewBuildings =view.findViewById(recyclerView_buildings);
+        RecyclerView recyclerViewBuildings = view.findViewById(recyclerView_buildings);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext());
         recyclerViewBuildings.setLayoutManager(linearLayoutManager);
 
         List<Building> buildingsArray= new ArrayList<>();
         for (int i =0; i< 50; i++) {
-            buildingsArray.add(new Building("nome"+i, "indirizzo"+i));
+            buildingsArray.add(new Building("id"+i,"nome"+i, "indirizzo"+i));
         }
 
 

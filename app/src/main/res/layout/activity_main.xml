@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/searchbar_hint">
 
+
             </com.google.android.material.search.SearchBar>
         </com.google.android.material.appbar.AppBarLayout>
 
